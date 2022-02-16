@@ -7,6 +7,26 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Lottery Numbers Draw App</h1>
+    <h1>Lottery Numbers Draw App!</h1>
+    <h4>Hope this is the one!</h4>
+
+    <input type="button" id='script' name="scriptbutton" value=" Run Script " onclick="goPython()">
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" 
+    crossorigin="anonymous"></script>
+
+    <script>
+        function goPython(){
+            $.ajax({
+              url: "Script.py",
+             context: document.body
+            }).done(function() {
+             alert('Script Executed!');;
+            });
+        }
+    </script>
+
 </body>
 </html>
+
+
